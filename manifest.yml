@@ -1,0 +1,11 @@
+---
+applications:
+- name: aviationMicroM
+  memory: 1024M
+  random-route: true
+  host: aviation-micro-new
+  path: target/aviation-0.0.1-SNAPSHOT.jar
+  services:
+    - service-registry
+  env:
+    SPRING_PROFILES_ACTIVE: cloud

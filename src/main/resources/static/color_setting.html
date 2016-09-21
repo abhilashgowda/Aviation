@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Aviation UI</title>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/aviations.css">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+	<link href="css/dashboard.css" rel="stylesheet">  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+<!--start top navigation bar -->
+		
+
+	<div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+		<div>
+		<h2 id="sidebar-title">Aviation Menu</h2>
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+ 
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-cog" class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>&nbsp;&nbsp;&nbsp;Setting </a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                         <li><a href="color_setting.html">Color Setting</a></li>
+                     
+                    </ul>
+                </li>
+				
+				
+				
+				
+				
+				
+				<li>
+                    <a href="#"><span class="glyphicon glyphicon-dashboard" class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>&nbsp;&nbsp;&nbsp;History Details</a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                         <li><a href="UnitFilter.html">Unit</a></li>
+                        <li><a href="#">Aircraft-Position</a></li>
+						<li><a href="#">System-Aircraft</a></li>
+                    </ul>
+                </li>
+				
+				
+								<li>
+                    <a href="#"><span class="glyphicon glyphicon-file" class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>&nbsp;&nbsp;&nbsp;Reference Page</a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#">Reason Codes</a></li>
+						<li><a href="#">Fleet Codes</a></li>
+						<li><a href="#">Position Codes</a></li>
+						<li><a href="#">Station Codes</a></li>
+						<li><a href="#">ATA Codes</a></li>
+                    </ul>
+                </li>
+
+                
+            </ul>
+        </div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+                  <div class="row">
+            <div class="box">
+                <div class="col-lg-6 text-center">
+				
+					<div class="color-wrapper">
+		<form>
+			<table
+				class="table table-striped table-bordered table-hover table-condensed">
+				<caption
+					style="color: #4340e2; text-align: center; font-size: 22px;">Color
+					Setting</caption>
+				<thead>
+					<tr class="info">
+						<th>S.No.</th>
+						<th>Code</th>
+						<th>Color</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Unscheduled</td>
+						<td><input type="color" name="unscheduled" value="#B71C1C"></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Scheduled</td>
+						<td><input type="color" name="scheduled" value="#1A237E"></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Other</td>
+						<td><input type="color" name="other" value="#009688"></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Overhauled</td>
+						<td><input type="color" name="overhauled" value="#4A148C"></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Installation Per Bar</td>
+						<td><input type="color" name="installationPerBar"
+							value="#8BC34A"></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Still Installed Box</td>
+						<td><input type="color" name="stillInstalledBox"
+							value="#FFEB3B"></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>Non Active Unit</td>
+						<td><input type="color" name="nonActiveUnit" value="##FF9800"></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>Problem History</td>
+						<td><input type="color" name="problemHistory" value="#795548"></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>TSI Problems</td>
+						<td><input type="color" name="tsiProblems" value="#FF5722"></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>Group Headers</td>
+						<td><input type="color" name="groupHeaders" value="#9E9E9E"></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>Tail Numbers</td>
+						<td><input type="color" name="tailNumbers" value="#827717"></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>Installed On Active</td>
+						<td><input type="color" name="installedOnActive"
+							value="#4527A0"></td>
+					</tr>
+					<tr>
+						<td colspan="3"><input type="submit" name="save" value="Save" class="color-button">
+						<input type="submit" name="save" value="Reset" class="color-button">
+						<input type="reset" name="save" value="Cancel" class="color-button"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+      
+              
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+		</div>
+    </div>
+	
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+	
+		
+		
+	
+<!--end top navigation bar -->
+
+<!--left navigation bar start-->
+
+
+
+</body>
+</html>

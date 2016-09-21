@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Aviation UI</title>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/aviations.css">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+	<link href="css/dashboard.css" rel="stylesheet">  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+<!--start top navigation bar -->
+		
+
+	<div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+		<div>
+		<h2 id="sidebar-title">Aviation Menu</h2>
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+ 
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-cog" class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>&nbsp;&nbsp;&nbsp;Setting </a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                         <li><a href="color_setting.html">Color Setting</a></li>
+                     
+                    </ul>
+                </li>
+				
+				
+				
+				
+				
+				
+				<li>
+                    <a href="#"><span class="glyphicon glyphicon-dashboard" class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>&nbsp;&nbsp;&nbsp;History Details</a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                         <li><a href="UnitFilter.html">Unit</a></li>
+                        <li><a href="#">Aircraft-Position</a></li>
+						<li><a href="#">System-Aircraft</a></li>
+                    </ul>
+                </li>
+				
+				
+								<li>
+                    <a href="#"><span class="glyphicon glyphicon-file" class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span>&nbsp;&nbsp;&nbsp;Reference Page</a>
+                       <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#">Reason Codes</a></li>
+						<li><a href="#">Fleet Codes</a></li>
+						<li><a href="#">Position Codes</a></li>
+						<li><a href="#">Station Codes</a></li>
+						<li><a href="#">ATA Codes</a></li>
+                    </ul>
+                </li>
+
+                
+            </ul>
+        </div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+                  <div class="row">
+            <div class="box">
+
+				
+	<div class="filter-wrapper container">
+		<form id="filter-form">
+			<div align="center">
+				<span id="filter-Title">Unit Based Filter Editor</span>
+			</div>
+			<div class="form-group">
+				<label for="filterName">Filter Name:</label> <input type="text"
+					class="form-control" id="filterName"
+					placeholder="Enter filter name">
+			</div>
+			<div class="form-group date-range">
+				<label for="dateRange">Date Range:</label>
+				<div style="color:black">
+					<label for="fromDate">From:</label> <input type="date"
+						class="form-control" id="fromDate"> <label for="toDate">To:</label>
+					<input type="date" class="form-control" id="toDate">
+				</div>
+
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="mfgGroup">Group
+					By MFG part Number</label>
+			</div>
+			<div class="form-group">
+				<label for="sortBy">Sort by:</label> <select
+					class="form-control" id="sortBy" name="sortBy" onchange="displaySn()">
+					<option>Select One Sort By Item</option>
+					<option value="1">Serial Number</option>
+					<option value="2">Number of Removals</option>
+					<option value="3">Last Installation Date</option>
+					<option value="4">Last Removal Date</option>
+				</select>
+			</div>
+			<div id="serial-number">
+				<label for="serialNumber">Serial Number</label>
+				 <select class="form-control" id="sn" onchange="displayMFG()">
+				 <option>Select Serial Number</option>
+				 <option>1002</option>
+				 <option>1003</option>
+				 <option>1004</option>
+				 <option>1005</option>
+				 <option>1006</option>
+				 	</select>		
+			</div>
+			<div id="mfg-part-number">
+				<label for="mfgPartNumber">MFG Part Number</label>
+				 <select class="form-control" id="sn">
+				 <option>Select MFG part Number </option>
+				 <option>102</option>
+				 <option>203</option>
+				 <option>3004</option>
+				 <option>005</option>
+				 <option>2006</option>
+				 	</select>		
+			</div>
+			
+			<div class="form-group" id="no-of-removal">
+				<label for="noOfRemovalsame">Number of Removals:</label> <input type="text"
+					class="form-control" id="noOfRemovalsame" name="noOfRemovalsame"
+					placeholder="Enter number of Removals">
+			</div>
+				<div class="checkbox filter-checkbox">
+				<table>
+				<tr>
+				<td><label><input type="checkbox" name="installed Unit">Installed Unit</label></td>
+				<td><label><input type="checkbox" name="newUnit">New Unit</label></td>
+				</tr>
+				<tr>
+				<td><label><input type="checkbox" name="nonActiveUnit">Non-Active Unit</label></td>
+				<td><label><input type="checkbox" name="exNonActiveUnit">Exclude Non-Active Unit</label></td>
+				</tr>
+				<tr>
+				<td><label><input type="checkbox" name="problemUnit">Problem Unit</label></td>
+				<td><label><input type="checkbox" name="exProblemUnit">Exclude Problems Unit</label></td>
+				</tr>
+				<tr>
+				<td><label><input type="checkbox" name="overhauledUnit">Overhauled Unit</label>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><label><input type="checkbox" name="exOverhauledUnit">Exclude Overhauled Units</label></td>
+				</tr>
+				</table>
+			</div>
+			<div class="filter-action-button">
+				<button type="button" class="btn btn-default filter-button">Use Default Setting</button>
+				<button type="button" class="btn btn-default filter-button">Use Saved Setting</button>
+				<button type="button" class="btn btn-default filter-button">Load Saved Filter</button>
+				<button type="button" class="btn btn-default filter-button">Save Filter</button>
+				<button type="button" class="btn btn-default filter-button">Save Filter As</button>
+				<button type="button" class="btn btn-default filter-button">Cancel</button>
+				<button type="submit" class="btn btn-default filter-button">OK</button>
+			</div>
+		</form>
+	</div>
+              
+
+            </div>
+        </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+		</div>
+    </div>
+	
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+	
+		
+		
+	
+<!--end top navigation bar -->
+
+<!--left navigation bar start-->
+
+
+
+</body>
+<script type="text/javascript">
+ function displaySn() {
+	 
+	 var value = document.getElementById("sortBy").value;
+	 	if(value == "1")
+	 		 	document.getElementById("serial-number").style.display = "block";
+	 	else
+	 		{
+	 		document.getElementById("serial-number").style.display = "none";
+	 		document.getElementById("mfg-part-number").style.display = "none";
+	 		}
+	 		
+	 	if(value == "2")
+ 		 	document.getElementById("no-of-removal").style.display = "block";
+	 	else
+	 		{
+	 		document.getElementById("no-of-removal").style.display = "none";
+	 		document.getElementById("mfg-part-number").style.display = "none";
+	 		
+	 		}
+	 	/* if(value == "3")
+ 		 	document.getElementById("serial-number").style.display = "block";
+	 	else
+	 		document.getElementById("serial-number").style.display = "none";
+	 	if(value == "4")
+ 		 	document.getElementById("serial-number").style.display = "block";
+	 	else
+	 		document.getElementById("serial-number").style.display = "none";
+	 		 */
+}
+ 
+ function displayMFG(){
+	 document.getElementById("mfg-part-number").style.display = "block";
+	 }
+		 
+</script>
+</html>

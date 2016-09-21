@@ -1,0 +1,36 @@
+a#mr-brand {
+  font-size: 28px;
+  color: rgb(51, 41, 195);
+  stroke: rgb(113, 56, 56);
+  border: blanchedalmond;
+}
+
+.mr-container {
+  padding: 0 15px;
+  background-color: ghostwhite;
+  margin-right: 908px;
+}
+body{
+color: rgba(255,255,255,0.9)
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.row {
+ margin-right: -1045px;
+  margin-left: -15px;
+}
+.right-container {
+  background-color: darkseagreen;
+  margin-left: 326px;
+  margin-top: -195px;
+}
+footer {
+  background-color: khaki;
+  height: 50px;
+  margin-top: 500px;
+}
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}	
